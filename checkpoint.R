@@ -71,10 +71,9 @@ libraryLoader <- function(input_date, scan_bool, mail.pkg = FALSE) {
   pkg_vector <- c("RODBC","dplyr", "tidyr", "readr", "stringr","readxl", "tidyverse", "XML", "RCurl", "httr", "rvest", "zoo", "openxlsx", "reticulate")
   lapply(X = pkg_vector,FUN = (func_package))
   
-  source("F:/Research/_Performing Credit Quantitative Research/R/Lib_loader/func/sql.R")
+  source("/func/sql.R")
   if(isTRUE(mail.pkg)){
-  source("F:/Research/_Performing Credit Quantitative Research/R/Lib_loader/func/mail.R")
+  source("/func/mail.R")
   }
-  source("F:/Research/_Performing Credit Quantitative Research/R/scores_to_sql/PD_Score_Library/PD_rating_calc.R")
-  source("F:/Research/_Performing Credit Quantitative Research/R/Lib_loader/func/sharepoint.R")
+  source("/func/sharepoint.R")
 }
