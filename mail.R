@@ -3,12 +3,12 @@ check <- list.files(path = .libPaths()[1])
 check <- check[(check %in% "RDCOMClient")]
 if(length(check) == 0){
   
-  path <- "F:\\Research\\_Performing Credit Quantitative Research\\R\\Lib_loader\\func\\RDCOMClient"
+  path <- "\\RDCOMClient"
   dest <-  gsub("/", "\\\\",.libPaths()[1])
   pwshl <- paste0('Copy-Item -Path "',path,'" -Destination "', dest, '" -Recurse')
   writeLines(pwshl, paste0(getwd(),"/shell.ps1"))
   print("First time using RDCOMCLIENT. Install package:")
-  print("Run the following script: F:/Research/_Performing Credit Quantitative Research/R/Lib_loader/shell.ps1, right-click and run with powershell..")
+  print("Run the following script:./shell.ps1, right-click and run with powershell..")
 }
 
 library(RDCOMClient)
